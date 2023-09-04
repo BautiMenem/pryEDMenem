@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="clsCola.cs" />
     <Compile Include="clsNodo.cs" />
+    <Compile Include="clsPila.cs" />
     <Compile Include="frmCola.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +60,12 @@
     </Compile>
     <Compile Include="frmDatos.Designer.cs">
       <DependentUpon>frmDatos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPila.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPila.Designer.cs">
+      <DependentUpon>frmPila.cs</DependentUpon>
     </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
@@ -73,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDatos.resx">
       <DependentUpon>frmDatos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPila.resx">
+      <DependentUpon>frmPila.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

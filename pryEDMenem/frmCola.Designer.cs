@@ -77,7 +77,6 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(86, 81);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(108, 20);
@@ -85,7 +84,6 @@
             // 
             // txtTramite
             // 
-            this.txtTramite.Enabled = false;
             this.txtTramite.Location = new System.Drawing.Point(86, 111);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(108, 20);
@@ -100,7 +98,6 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Enabled = false;
             this.btnAgregar.Location = new System.Drawing.Point(21, 165);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(159, 39);

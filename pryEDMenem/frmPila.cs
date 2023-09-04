@@ -10,17 +10,15 @@ using System.Windows.Forms;
 
 namespace pryEDMenem
 {
-    public partial class frmCola : Form
+    public partial class frmPila : Form
     {
-        public frmCola()
+        public frmPila()
         {
             InitializeComponent();
         }
-
-        clsCola FilaDePersonas = new clsCola();
+        clsPila FilaDePersonas = new clsPila();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-           
             clsNodo ObjNodo = new clsNodo();
             ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
             ObjNodo.Nombre = txtNombre.Text;
@@ -29,17 +27,16 @@ namespace pryEDMenem
             FilaDePersonas.Agregar(ObjNodo);
             FilaDePersonas.Recorrer(dgvCola);
             FilaDePersonas.Recorrer(lstCola);
-            FilaDePersonas.Recorrer();
+            
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
             txtTramite.Text = "";
-            
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           
+
             if (FilaDePersonas.Primero != null)
             {
                 lblCodi.Text = FilaDePersonas.Primero.Codigo.ToString();
@@ -48,23 +45,13 @@ namespace pryEDMenem
                 FilaDePersonas.Eliminar();
                 FilaDePersonas.Recorrer(dgvCola);
                 FilaDePersonas.Recorrer(lstCola);
-                FilaDePersonas.Recorrer();
+                
             }
             else
             {
                 lblCodi.Text = "";
                 lblNomb.Text = "";
                 lblTrami.Text = "";
-            }
-        }
-
-        private void frmCola_Load(object sender, EventArgs e)
-        {
-            if (txtCodigo.Text != "")
-            {
-                txtNombre.Enabled = true;
-                txtTramite.Enabled = true;
-                btnAgregar.Enabled = true;
             }
         }
     }

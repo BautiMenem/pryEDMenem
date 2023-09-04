@@ -38,5 +38,11 @@ namespace pryEDMenem
         {
             this.Close();
         }
+
+        private void pilaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmPila p = new frmPila();
+            p.ShowDialog();
+        }
     }
 }
