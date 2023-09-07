@@ -44,5 +44,17 @@ namespace pryEDMenem
             frmPila p = new frmPila();
             p.ShowDialog();
         }
+
+        private void listaSimpleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaSimple l = new frmListaSimple();
+            l.ShowDialog();
+        }
+
+        private void listaDobleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaDoble ld = new frmListaDoble();
+            ld.ShowDialog();
+        }
     }
 }

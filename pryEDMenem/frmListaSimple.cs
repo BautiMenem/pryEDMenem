@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace pryEDMenem
 {
-    public partial class frmPila : Form
+    public partial class frmListaSimple : Form
     {
-        public frmPila()
+        public frmListaSimple()
         {
             InitializeComponent();
         }
-        clsPila FilaDePersonas = new clsPila();
+        clsListaSimple Codigos = new clsListaSimple();
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             clsNodo ObjNodo = new clsNodo();
@@ -24,10 +24,12 @@ namespace pryEDMenem
             ObjNodo.Nombre = txtNombre.Text;
             ObjNodo.Tramite = txtTramite.Text;
 
-            FilaDePersonas.Agregar(ObjNodo);
-            FilaDePersonas.Recorrer(dgvPila);
-            FilaDePersonas.Recorrer(lstPila);
-            
+            Codigos.Agregar(ObjNodo);
+            Codigos.Recorrer(dgvLista);
+            Codigos.Recorrer(lstLista);
+            Codigos.Recorrer(cboCodigo);
+            Codigos.Recorrer();
+
 
             txtCodigo.Text = "";
             txtNombre.Text = "";
@@ -36,29 +38,31 @@ namespace pryEDMenem
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
+            
 
-            if (FilaDePersonas.Primero != null)
+            if (Codigos.Primero != null)
             {
-                lblCodi.Text = FilaDePersonas.Primero.Codigo.ToString();
-                lblNomb.Text = FilaDePersonas.Primero.Nombre;
-                lblTrami.Text = FilaDePersonas.Primero.Tramite;
-                FilaDePersonas.Eliminar();
-                FilaDePersonas.Recorrer(dgvPila);
-                FilaDePersonas.Recorrer(lstPila);
-                
+                Int32 Codigo = Convert.ToInt32(cboCodigo.Text);
+                Codigos.Eliminar(Codigo);
+                Codigos.Recorrer(dgvLista);
+                Codigos.Recorrer(lstLista);
+                Codigos.Recorrer(cboCodigo);
+                Codigos.Recorrer();
+
             }
-            else
-            {
-                lblCodi.Text = "";
-                lblNomb.Text = "";
-                lblTrami.Text = "";
-            }
+           
+        }
+
+        private void mrcElemento_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void txtTramite_TextChanged(object sender, EventArgs e)
         {
             validardatos();
         }
+
         public void validardatos()
         {
             if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
@@ -79,6 +83,23 @@ namespace pryEDMenem
         private void txtCodigo_TextChanged(object sender, EventArgs e)
         {
             validardatos();
+        }
+
+        private void cboCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCodigo.Text != "")
+            {
+                btnEliminar.Enabled = true;
+            }
+            else
+            {
+                btnEliminar.Enabled = false;
+            }
+        }
+
+        private void frmListaSimple_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

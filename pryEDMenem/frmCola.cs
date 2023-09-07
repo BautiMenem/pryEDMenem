@@ -60,12 +60,33 @@ namespace pryEDMenem
 
         private void frmCola_Load(object sender, EventArgs e)
         {
-            if (txtCodigo.Text != "")
+           
+        }
+        public void validardatos()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
             {
-                txtNombre.Enabled = true;
-                txtTramite.Enabled = true;
                 btnAgregar.Enabled = true;
             }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+            validardatos();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+            validardatos();
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            validardatos();
         }
     }
 }
