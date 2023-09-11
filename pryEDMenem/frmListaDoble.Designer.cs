@@ -48,9 +48,9 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.mrcListarD = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.rbAscendente = new System.Windows.Forms.RadioButton();
             this.rbDescendente = new System.Windows.Forms.RadioButton();
+            this.rbAscendente = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.mrcListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaD)).BeginInit();
             this.mrcEliminado.SuspendLayout();
@@ -195,6 +195,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -235,17 +236,16 @@
             this.mrcListarD.TabStop = false;
             this.mrcListarD.Text = "Listar Datos";
             // 
-            // pictureBox1
+            // rbDescendente
             // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 252);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.rbDescendente.AutoSize = true;
+            this.rbDescendente.Location = new System.Drawing.Point(20, 51);
+            this.rbDescendente.Name = "rbDescendente";
+            this.rbDescendente.Size = new System.Drawing.Size(89, 17);
+            this.rbDescendente.TabIndex = 1;
+            this.rbDescendente.TabStop = true;
+            this.rbDescendente.Text = "Descendente";
+            this.rbDescendente.UseVisualStyleBackColor = true;
             // 
             // rbAscendente
             // 
@@ -258,23 +258,24 @@
             this.rbAscendente.Text = "Ascendente";
             this.rbAscendente.UseVisualStyleBackColor = true;
             // 
-            // rbDescendente
+            // pictureBox1
             // 
-            this.rbDescendente.AutoSize = true;
-            this.rbDescendente.Location = new System.Drawing.Point(20, 51);
-            this.rbDescendente.Name = "rbDescendente";
-            this.rbDescendente.Size = new System.Drawing.Size(89, 17);
-            this.rbDescendente.TabIndex = 1;
-            this.rbDescendente.TabStop = true;
-            this.rbDescendente.Text = "Descendente";
-            this.rbDescendente.UseVisualStyleBackColor = true;
+            this.pictureBox1.ErrorImage = null;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(8, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(206, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
             // 
             // frmListaDoble
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(659, 526);
+            this.ClientSize = new System.Drawing.Size(649, 526);
             this.Controls.Add(this.mrcListarD);
             this.Controls.Add(this.mrcListar);
             this.Controls.Add(this.mrcEliminado);

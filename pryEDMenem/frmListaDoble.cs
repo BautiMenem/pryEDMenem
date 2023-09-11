@@ -62,5 +62,24 @@ namespace pryEDMenem
                 mrcListarD.Enabled = false;
             }
         }
+        clsListaDoble Codigos = new clsListaDoble();
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            clsNodo ObjNodo = new clsNodo();
+            ObjNodo.Codigo = Convert.ToInt32(txtCodigo.Text);
+            ObjNodo.Nombre = txtNombre.Text;
+            ObjNodo.Tramite = txtTramite.Text;
+
+            Codigos.Agregar(ObjNodo);
+            Codigos.Recorrer(dgvListaD);
+            Codigos.Recorrer(lstListaD);
+            Codigos.Recorrer(cboCodigo);
+            Codigos.Recorrer();
+
+
+            txtCodigo.Text = "";
+            txtNombre.Text = "";
+            txtTramite.Text = "";
+        }
     }
 }
