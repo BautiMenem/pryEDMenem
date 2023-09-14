@@ -81,5 +81,40 @@ namespace pryEDMenem
             txtNombre.Text = "";
             txtTramite.Text = "";
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (Codigos.Primero != null)
+            {
+                Int32 Codigo = Convert.ToInt32(cboCodigo.Text);
+                Codigos.Eliminar(Codigo);
+                Codigos.Recorrer(dgvListaD);
+                Codigos.Recorrer(lstListaD);
+                Codigos.Recorrer(cboCodigo);
+                Codigos.Recorrer();
+
+            }
+
+        }
+
+        private void rbAscendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbAscendente.Checked)
+            {
+                Codigos.Recorrer(dgvListaD);
+                Codigos.Recorrer(lstListaD);
+                Codigos.Recorrer(cboCodigo);
+            }
+        }
+
+        private void rbDescendente_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rbDescendente.Checked)
+            {
+                Codigos.RecorrerDes(dgvListaD);
+                Codigos.RecorrerDes(lstListaD);
+                Codigos.RecorrerDes(cboCodigo);
+            }
+        }
     }
 }

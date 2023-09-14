@@ -51,6 +51,12 @@
     <Compile Include="clsListaSimple.cs" />
     <Compile Include="clsNodo.cs" />
     <Compile Include="clsPila.cs" />
+    <Compile Include="Estructuras Ramificadas - Arbol Binario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estructuras Ramificadas - Arbol Binario.Designer.cs">
+      <DependentUpon>Estructuras Ramificadas - Arbol Binario.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCola.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Estructuras Ramificadas - Arbol Binario.resx">
+      <DependentUpon>Estructuras Ramificadas - Arbol Binario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCola.resx">
       <DependentUpon>frmCola.cs</DependentUpon>
     </EmbeddedResource>

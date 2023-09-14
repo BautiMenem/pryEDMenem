@@ -1,6 +1,6 @@
 ﻿namespace pryEDMenem
 {
-    partial class frmListaDoble
+    partial class Estructuras_Ramificadas___Arbol_Binario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaDoble));
             this.mrcListar = new System.Windows.Forms.GroupBox();
-            this.lstListaD = new System.Windows.Forms.ListBox();
             this.dgvListaD = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,36 +45,29 @@
             this.lblTramite = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.mrcListarD = new System.Windows.Forms.GroupBox();
-            this.rbDescendente = new System.Windows.Forms.RadioButton();
-            this.rbAscendente = new System.Windows.Forms.RadioButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnEquilibrar = new System.Windows.Forms.Button();
+            this.rbIn = new System.Windows.Forms.RadioButton();
+            this.rbPre = new System.Windows.Forms.RadioButton();
+            this.rbPost = new System.Windows.Forms.RadioButton();
+            this.tvArbol = new System.Windows.Forms.TreeView();
             this.mrcListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaD)).BeginInit();
             this.mrcEliminado.SuspendLayout();
             this.mrcElemento.SuspendLayout();
-            this.mrcListarD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // mrcListar
             // 
-            this.mrcListar.Controls.Add(this.lstListaD);
+            this.mrcListar.Controls.Add(this.rbPost);
+            this.mrcListar.Controls.Add(this.rbPre);
+            this.mrcListar.Controls.Add(this.rbIn);
             this.mrcListar.Controls.Add(this.dgvListaD);
-            this.mrcListar.Location = new System.Drawing.Point(8, 270);
+            this.mrcListar.Location = new System.Drawing.Point(11, 266);
             this.mrcListar.Name = "mrcListar";
-            this.mrcListar.Size = new System.Drawing.Size(628, 250);
-            this.mrcListar.TabIndex = 15;
+            this.mrcListar.Size = new System.Drawing.Size(628, 226);
+            this.mrcListar.TabIndex = 20;
             this.mrcListar.TabStop = false;
-            this.mrcListar.Text = "Listado en una Lista y una Grilla";
-            // 
-            // lstListaD
-            // 
-            this.lstListaD.FormattingEnabled = true;
-            this.lstListaD.Location = new System.Drawing.Point(6, 19);
-            this.lstListaD.Name = "lstListaD";
-            this.lstListaD.Size = new System.Drawing.Size(186, 212);
-            this.lstListaD.TabIndex = 1;
+            this.mrcListar.Text = "Listado del Árbol";
             // 
             // dgvListaD
             // 
@@ -87,7 +78,7 @@
             this.Column3});
             this.dgvListaD.Location = new System.Drawing.Point(212, 20);
             this.dgvListaD.Name = "dgvListaD";
-            this.dgvListaD.Size = new System.Drawing.Size(395, 209);
+            this.dgvListaD.Size = new System.Drawing.Size(395, 183);
             this.dgvListaD.TabIndex = 0;
             // 
             // Column1
@@ -110,10 +101,10 @@
             this.mrcEliminado.Controls.Add(this.cboCodigo);
             this.mrcEliminado.Controls.Add(this.btnEliminar);
             this.mrcEliminado.Controls.Add(this.lblCod);
-            this.mrcEliminado.Location = new System.Drawing.Point(436, 12);
+            this.mrcEliminado.Location = new System.Drawing.Point(439, 12);
             this.mrcEliminado.Name = "mrcEliminado";
-            this.mrcEliminado.Size = new System.Drawing.Size(200, 131);
-            this.mrcEliminado.TabIndex = 14;
+            this.mrcEliminado.Size = new System.Drawing.Size(200, 157);
+            this.mrcEliminado.TabIndex = 18;
             this.mrcEliminado.TabStop = false;
             this.mrcEliminado.Text = "Elemento Eliminado";
             // 
@@ -125,18 +116,16 @@
             this.cboCodigo.Name = "cboCodigo";
             this.cboCodigo.Size = new System.Drawing.Size(101, 21);
             this.cboCodigo.TabIndex = 8;
-            this.cboCodigo.SelectedIndexChanged += new System.EventHandler(this.cboCodigo_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(20, 71);
+            this.btnEliminar.Location = new System.Drawing.Point(9, 94);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(159, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(185, 39);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCod
             // 
@@ -156,10 +145,10 @@
             this.mrcElemento.Controls.Add(this.lblTramite);
             this.mrcElemento.Controls.Add(this.lblNombre);
             this.mrcElemento.Controls.Add(this.lblCodigo);
-            this.mrcElemento.Location = new System.Drawing.Point(220, 12);
+            this.mrcElemento.Location = new System.Drawing.Point(223, 12);
             this.mrcElemento.Name = "mrcElemento";
-            this.mrcElemento.Size = new System.Drawing.Size(210, 252);
-            this.mrcElemento.TabIndex = 13;
+            this.mrcElemento.Size = new System.Drawing.Size(210, 239);
+            this.mrcElemento.TabIndex = 17;
             this.mrcElemento.TabStop = false;
             this.mrcElemento.Text = "Nuevo Elemento";
             // 
@@ -169,7 +158,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(108, 20);
             this.txtNombre.TabIndex = 6;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtTramite
             // 
@@ -177,7 +165,6 @@
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(108, 20);
             this.txtTramite.TabIndex = 5;
-            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtCodigo
             // 
@@ -185,18 +172,16 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtCodigo.TabIndex = 4;
-            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // btnAgregar
             // 
             this.btnAgregar.Enabled = false;
-            this.btnAgregar.Location = new System.Drawing.Point(35, 188);
+            this.btnAgregar.Location = new System.Drawing.Point(20, 188);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(159, 39);
+            this.btnAgregar.Size = new System.Drawing.Size(174, 39);
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -225,78 +210,75 @@
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
             // 
-            // mrcListarD
+            // btnEquilibrar
             // 
-            this.mrcListarD.Controls.Add(this.rbDescendente);
-            this.mrcListarD.Controls.Add(this.rbAscendente);
-            this.mrcListarD.Enabled = false;
-            this.mrcListarD.Location = new System.Drawing.Point(436, 149);
-            this.mrcListarD.Name = "mrcListarD";
-            this.mrcListarD.Size = new System.Drawing.Size(200, 115);
-            this.mrcListarD.TabIndex = 15;
-            this.mrcListarD.TabStop = false;
-            this.mrcListarD.Text = "Listar Datos";
+            this.btnEquilibrar.Enabled = false;
+            this.btnEquilibrar.Location = new System.Drawing.Point(448, 200);
+            this.btnEquilibrar.Name = "btnEquilibrar";
+            this.btnEquilibrar.Size = new System.Drawing.Size(188, 39);
+            this.btnEquilibrar.TabIndex = 9;
+            this.btnEquilibrar.Text = "Equilibrar";
+            this.btnEquilibrar.UseVisualStyleBackColor = true;
             // 
-            // rbDescendente
+            // rbIn
             // 
-            this.rbDescendente.AutoSize = true;
-            this.rbDescendente.Location = new System.Drawing.Point(20, 51);
-            this.rbDescendente.Name = "rbDescendente";
-            this.rbDescendente.Size = new System.Drawing.Size(89, 17);
-            this.rbDescendente.TabIndex = 1;
-            this.rbDescendente.TabStop = true;
-            this.rbDescendente.Text = "Descendente";
-            this.rbDescendente.UseVisualStyleBackColor = true;
-            this.rbDescendente.CheckedChanged += new System.EventHandler(this.rbDescendente_CheckedChanged);
+            this.rbIn.AutoSize = true;
+            this.rbIn.Location = new System.Drawing.Point(22, 34);
+            this.rbIn.Name = "rbIn";
+            this.rbIn.Size = new System.Drawing.Size(63, 17);
+            this.rbIn.TabIndex = 1;
+            this.rbIn.TabStop = true;
+            this.rbIn.Text = "In-Order";
+            this.rbIn.UseVisualStyleBackColor = true;
             // 
-            // rbAscendente
+            // rbPre
             // 
-            this.rbAscendente.AutoSize = true;
-            this.rbAscendente.Location = new System.Drawing.Point(20, 28);
-            this.rbAscendente.Name = "rbAscendente";
-            this.rbAscendente.Size = new System.Drawing.Size(82, 17);
-            this.rbAscendente.TabIndex = 0;
-            this.rbAscendente.TabStop = true;
-            this.rbAscendente.Text = "Ascendente";
-            this.rbAscendente.UseVisualStyleBackColor = true;
-            this.rbAscendente.CheckedChanged += new System.EventHandler(this.rbAscendente_CheckedChanged);
+            this.rbPre.AutoSize = true;
+            this.rbPre.Location = new System.Drawing.Point(22, 91);
+            this.rbPre.Name = "rbPre";
+            this.rbPre.Size = new System.Drawing.Size(70, 17);
+            this.rbPre.TabIndex = 2;
+            this.rbPre.TabStop = true;
+            this.rbPre.Text = "Pre-Order";
+            this.rbPre.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // rbPost
             // 
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(8, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(206, 252);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
+            this.rbPost.AutoSize = true;
+            this.rbPost.Location = new System.Drawing.Point(22, 152);
+            this.rbPost.Name = "rbPost";
+            this.rbPost.Size = new System.Drawing.Size(75, 17);
+            this.rbPost.TabIndex = 3;
+            this.rbPost.TabStop = true;
+            this.rbPost.Text = "Post-Order";
+            this.rbPost.UseVisualStyleBackColor = true;
             // 
-            // frmListaDoble
+            // tvArbol
+            // 
+            this.tvArbol.Location = new System.Drawing.Point(13, 12);
+            this.tvArbol.Name = "tvArbol";
+            this.tvArbol.Size = new System.Drawing.Size(204, 239);
+            this.tvArbol.TabIndex = 21;
+            // 
+            // Estructuras_Ramificadas___Arbol_Binario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(649, 526);
-            this.Controls.Add(this.mrcListarD);
+            this.ClientSize = new System.Drawing.Size(648, 500);
+            this.Controls.Add(this.tvArbol);
+            this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.mrcListar);
             this.Controls.Add(this.mrcEliminado);
             this.Controls.Add(this.mrcElemento);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "frmListaDoble";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListaDoble";
-            this.Load += new System.EventHandler(this.frmListaDoble_Load);
+            this.Name = "Estructuras_Ramificadas___Arbol_Binario";
+            this.Text = "Estructuras_Ramificadas___Arbol_Binario";
             this.mrcListar.ResumeLayout(false);
+            this.mrcListar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaD)).EndInit();
             this.mrcEliminado.ResumeLayout(false);
             this.mrcEliminado.PerformLayout();
             this.mrcElemento.ResumeLayout(false);
             this.mrcElemento.PerformLayout();
-            this.mrcListarD.ResumeLayout(false);
-            this.mrcListarD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -304,7 +286,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox mrcListar;
-        private System.Windows.Forms.ListBox lstListaD;
+        private System.Windows.Forms.RadioButton rbPost;
+        private System.Windows.Forms.RadioButton rbPre;
+        private System.Windows.Forms.RadioButton rbIn;
         private System.Windows.Forms.DataGridView dgvListaD;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -321,9 +305,7 @@
         private System.Windows.Forms.Label lblTramite;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.GroupBox mrcListarD;
-        private System.Windows.Forms.RadioButton rbDescendente;
-        private System.Windows.Forms.RadioButton rbAscendente;
+        private System.Windows.Forms.Button btnEquilibrar;
+        private System.Windows.Forms.TreeView tvArbol;
     }
 }

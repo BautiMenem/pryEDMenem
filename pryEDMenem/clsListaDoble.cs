@@ -67,6 +67,45 @@ namespace pryEDMenem
             }
         }
 
+        public void Eliminar(Int32 Codigo)
+        {
+            if (Primero.Codigo == Codigo && Ultimo == Primero)
+            {
+                Primero = null;
+                Ultimo = null;
+            }
+            else
+            {
+                if (Primero.Codigo == Codigo)
+                {
+                    Primero = Primero.Siguiente;
+                    Primero.Anterior = null;
+                }
+                else
+                {
+                    if (Ultimo.Codigo == Codigo)
+                    {
+                        Ultimo = Ultimo.Anterior;
+                        Ultimo.Siguiente = null;
+                    }
+                    else
+                    {
+                        clsNodo aux = Primero;
+                        clsNodo ant = Primero;
+                        while (aux.Codigo < Codigo)
+                        {
+                            ant = aux;
+                            aux = aux.Siguiente;
+                        }
+                        ant.Siguiente = aux.Siguiente;
+                        aux = aux.Siguiente;
+                        aux.Anterior = ant;
+                    }
+                }
+            }
+        }
+
+
         public void Recorrer(DataGridView Grilla)
         {
             clsNodo aux = Primero;
@@ -115,6 +154,39 @@ namespace pryEDMenem
             {
                 Combo.Items.Add(aux.Codigo);
                 aux = aux.Siguiente;
+            }
+        }
+
+        public void RecorrerDes(DataGridView Grilla)
+        {
+            clsNodo aux = Ultimo;
+            Grilla.Rows.Clear();
+            while (aux != null)
+            {
+                Grilla.Rows.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ListBox Lista)
+        {
+            clsNodo aux = ult;
+            Lista.Items.Clear();
+            while (aux != null)
+            {
+                Lista.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
+            }
+        }
+
+        public void RecorrerDes(ComboBox Combo)
+        {
+            clsNodo aux = Ultimo;
+            Combo.Items.Clear();
+            while (aux != null)
+            {
+                Combo.Items.Add(aux.Codigo);
+                aux = aux.Anterior;
             }
         }
     }
