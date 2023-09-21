@@ -48,5 +48,16 @@ namespace pryEDMenem
             get { return ant; }
             set { ant = value; }
         }
+
+        public clsNodo Izquierda
+        {
+            get { return ant; }
+            set { ant = value; }
+        }
+        public clsNodo Derecha
+        {
+            get { return sig; }
+            set { sig = value; }
+        }
     }
 }

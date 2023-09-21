@@ -1,6 +1,6 @@
 ﻿namespace pryEDMenem
 {
-    partial class Estructuras_Ramificadas___Arbol_Binario
+    partial class frmEstructuras_Ramificadas___Arbol_Binario
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.mrcListar = new System.Windows.Forms.GroupBox();
-            this.dgvListaD = new System.Windows.Forms.DataGridView();
+            this.rbPost = new System.Windows.Forms.RadioButton();
+            this.rbPre = new System.Windows.Forms.RadioButton();
+            this.rbIn = new System.Windows.Forms.RadioButton();
+            this.dgvArbol = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,22 +49,21 @@
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
-            this.rbIn = new System.Windows.Forms.RadioButton();
-            this.rbPre = new System.Windows.Forms.RadioButton();
-            this.rbPost = new System.Windows.Forms.RadioButton();
             this.tvArbol = new System.Windows.Forms.TreeView();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.mrcListar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
             this.mrcEliminado.SuspendLayout();
             this.mrcElemento.SuspendLayout();
             this.SuspendLayout();
             // 
             // mrcListar
             // 
+            this.mrcListar.Controls.Add(this.btnExportar);
             this.mrcListar.Controls.Add(this.rbPost);
             this.mrcListar.Controls.Add(this.rbPre);
             this.mrcListar.Controls.Add(this.rbIn);
-            this.mrcListar.Controls.Add(this.dgvListaD);
+            this.mrcListar.Controls.Add(this.dgvArbol);
             this.mrcListar.Location = new System.Drawing.Point(11, 266);
             this.mrcListar.Name = "mrcListar";
             this.mrcListar.Size = new System.Drawing.Size(628, 226);
@@ -69,17 +71,53 @@
             this.mrcListar.TabStop = false;
             this.mrcListar.Text = "Listado del Árbol";
             // 
-            // dgvListaD
+            // rbPost
             // 
-            this.dgvListaD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaD.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.rbPost.AutoSize = true;
+            this.rbPost.Location = new System.Drawing.Point(22, 109);
+            this.rbPost.Name = "rbPost";
+            this.rbPost.Size = new System.Drawing.Size(75, 17);
+            this.rbPost.TabIndex = 3;
+            this.rbPost.TabStop = true;
+            this.rbPost.Text = "Post-Order";
+            this.rbPost.UseVisualStyleBackColor = true;
+            this.rbPost.CheckedChanged += new System.EventHandler(this.rbPost_CheckedChanged);
+            // 
+            // rbPre
+            // 
+            this.rbPre.AutoSize = true;
+            this.rbPre.Location = new System.Drawing.Point(22, 73);
+            this.rbPre.Name = "rbPre";
+            this.rbPre.Size = new System.Drawing.Size(70, 17);
+            this.rbPre.TabIndex = 2;
+            this.rbPre.TabStop = true;
+            this.rbPre.Text = "Pre-Order";
+            this.rbPre.UseVisualStyleBackColor = true;
+            this.rbPre.CheckedChanged += new System.EventHandler(this.rbPre_CheckedChanged);
+            // 
+            // rbIn
+            // 
+            this.rbIn.AutoSize = true;
+            this.rbIn.Location = new System.Drawing.Point(22, 34);
+            this.rbIn.Name = "rbIn";
+            this.rbIn.Size = new System.Drawing.Size(63, 17);
+            this.rbIn.TabIndex = 1;
+            this.rbIn.TabStop = true;
+            this.rbIn.Text = "In-Order";
+            this.rbIn.UseVisualStyleBackColor = true;
+            this.rbIn.CheckedChanged += new System.EventHandler(this.rbIn_CheckedChanged);
+            // 
+            // dgvArbol
+            // 
+            this.dgvArbol.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArbol.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvListaD.Location = new System.Drawing.Point(212, 20);
-            this.dgvListaD.Name = "dgvListaD";
-            this.dgvListaD.Size = new System.Drawing.Size(395, 183);
-            this.dgvListaD.TabIndex = 0;
+            this.dgvArbol.Location = new System.Drawing.Point(212, 20);
+            this.dgvArbol.Name = "dgvArbol";
+            this.dgvArbol.Size = new System.Drawing.Size(395, 183);
+            this.dgvArbol.TabIndex = 0;
             // 
             // Column1
             // 
@@ -182,6 +220,7 @@
             this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // lblTramite
             // 
@@ -220,39 +259,6 @@
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
             // 
-            // rbIn
-            // 
-            this.rbIn.AutoSize = true;
-            this.rbIn.Location = new System.Drawing.Point(22, 34);
-            this.rbIn.Name = "rbIn";
-            this.rbIn.Size = new System.Drawing.Size(63, 17);
-            this.rbIn.TabIndex = 1;
-            this.rbIn.TabStop = true;
-            this.rbIn.Text = "In-Order";
-            this.rbIn.UseVisualStyleBackColor = true;
-            // 
-            // rbPre
-            // 
-            this.rbPre.AutoSize = true;
-            this.rbPre.Location = new System.Drawing.Point(22, 91);
-            this.rbPre.Name = "rbPre";
-            this.rbPre.Size = new System.Drawing.Size(70, 17);
-            this.rbPre.TabIndex = 2;
-            this.rbPre.TabStop = true;
-            this.rbPre.Text = "Pre-Order";
-            this.rbPre.UseVisualStyleBackColor = true;
-            // 
-            // rbPost
-            // 
-            this.rbPost.AutoSize = true;
-            this.rbPost.Location = new System.Drawing.Point(22, 152);
-            this.rbPost.Name = "rbPost";
-            this.rbPost.Size = new System.Drawing.Size(75, 17);
-            this.rbPost.TabIndex = 3;
-            this.rbPost.TabStop = true;
-            this.rbPost.Text = "Post-Order";
-            this.rbPost.UseVisualStyleBackColor = true;
-            // 
             // tvArbol
             // 
             this.tvArbol.Location = new System.Drawing.Point(13, 12);
@@ -260,7 +266,17 @@
             this.tvArbol.Size = new System.Drawing.Size(204, 239);
             this.tvArbol.TabIndex = 21;
             // 
-            // Estructuras_Ramificadas___Arbol_Binario
+            // btnExportar
+            // 
+            this.btnExportar.Enabled = false;
+            this.btnExportar.Location = new System.Drawing.Point(22, 152);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(174, 39);
+            this.btnExportar.TabIndex = 7;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
+            // 
+            // frmEstructuras_Ramificadas___Arbol_Binario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,11 +286,11 @@
             this.Controls.Add(this.mrcListar);
             this.Controls.Add(this.mrcEliminado);
             this.Controls.Add(this.mrcElemento);
-            this.Name = "Estructuras_Ramificadas___Arbol_Binario";
+            this.Name = "frmEstructuras_Ramificadas___Arbol_Binario";
             this.Text = "Estructuras_Ramificadas___Arbol_Binario";
             this.mrcListar.ResumeLayout(false);
             this.mrcListar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();
             this.mrcEliminado.ResumeLayout(false);
             this.mrcEliminado.PerformLayout();
             this.mrcElemento.ResumeLayout(false);
@@ -289,7 +305,7 @@
         private System.Windows.Forms.RadioButton rbPost;
         private System.Windows.Forms.RadioButton rbPre;
         private System.Windows.Forms.RadioButton rbIn;
-        private System.Windows.Forms.DataGridView dgvListaD;
+        private System.Windows.Forms.DataGridView dgvArbol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -307,5 +323,6 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Button btnEquilibrar;
         private System.Windows.Forms.TreeView tvArbol;
+        private System.Windows.Forms.Button btnExportar;
     }
 }
