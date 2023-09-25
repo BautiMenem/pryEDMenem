@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.mrcListar = new System.Windows.Forms.GroupBox();
+            this.btnExportar = new System.Windows.Forms.Button();
             this.rbPost = new System.Windows.Forms.RadioButton();
             this.rbPre = new System.Windows.Forms.RadioButton();
             this.rbIn = new System.Windows.Forms.RadioButton();
@@ -50,7 +51,6 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.btnEquilibrar = new System.Windows.Forms.Button();
             this.tvArbol = new System.Windows.Forms.TreeView();
-            this.btnExportar = new System.Windows.Forms.Button();
             this.mrcListar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).BeginInit();
             this.mrcEliminado.SuspendLayout();
@@ -66,10 +66,20 @@
             this.mrcListar.Controls.Add(this.dgvArbol);
             this.mrcListar.Location = new System.Drawing.Point(11, 266);
             this.mrcListar.Name = "mrcListar";
-            this.mrcListar.Size = new System.Drawing.Size(628, 226);
+            this.mrcListar.Size = new System.Drawing.Size(616, 226);
             this.mrcListar.TabIndex = 20;
             this.mrcListar.TabStop = false;
             this.mrcListar.Text = "Listado del Árbol";
+            // 
+            // btnExportar
+            // 
+            this.btnExportar.Enabled = false;
+            this.btnExportar.Location = new System.Drawing.Point(22, 152);
+            this.btnExportar.Name = "btnExportar";
+            this.btnExportar.Size = new System.Drawing.Size(174, 39);
+            this.btnExportar.TabIndex = 7;
+            this.btnExportar.Text = "Exportar";
+            this.btnExportar.UseVisualStyleBackColor = true;
             // 
             // rbPost
             // 
@@ -141,7 +151,7 @@
             this.mrcEliminado.Controls.Add(this.lblCod);
             this.mrcEliminado.Location = new System.Drawing.Point(439, 12);
             this.mrcEliminado.Name = "mrcEliminado";
-            this.mrcEliminado.Size = new System.Drawing.Size(200, 157);
+            this.mrcEliminado.Size = new System.Drawing.Size(188, 157);
             this.mrcEliminado.TabIndex = 18;
             this.mrcEliminado.TabStop = false;
             this.mrcEliminado.Text = "Elemento Eliminado";
@@ -158,12 +168,13 @@
             // btnEliminar
             // 
             this.btnEliminar.Enabled = false;
-            this.btnEliminar.Location = new System.Drawing.Point(9, 94);
+            this.btnEliminar.Location = new System.Drawing.Point(6, 112);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(185, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(174, 39);
             this.btnEliminar.TabIndex = 7;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // lblCod
             // 
@@ -252,12 +263,13 @@
             // btnEquilibrar
             // 
             this.btnEquilibrar.Enabled = false;
-            this.btnEquilibrar.Location = new System.Drawing.Point(448, 200);
+            this.btnEquilibrar.Location = new System.Drawing.Point(445, 200);
             this.btnEquilibrar.Name = "btnEquilibrar";
-            this.btnEquilibrar.Size = new System.Drawing.Size(188, 39);
+            this.btnEquilibrar.Size = new System.Drawing.Size(174, 39);
             this.btnEquilibrar.TabIndex = 9;
             this.btnEquilibrar.Text = "Equilibrar";
             this.btnEquilibrar.UseVisualStyleBackColor = true;
+            this.btnEquilibrar.Click += new System.EventHandler(this.btnEquilibrar_Click);
             // 
             // tvArbol
             // 
@@ -266,28 +278,18 @@
             this.tvArbol.Size = new System.Drawing.Size(204, 239);
             this.tvArbol.TabIndex = 21;
             // 
-            // btnExportar
-            // 
-            this.btnExportar.Enabled = false;
-            this.btnExportar.Location = new System.Drawing.Point(22, 152);
-            this.btnExportar.Name = "btnExportar";
-            this.btnExportar.Size = new System.Drawing.Size(174, 39);
-            this.btnExportar.TabIndex = 7;
-            this.btnExportar.Text = "Exportar";
-            this.btnExportar.UseVisualStyleBackColor = true;
-            // 
             // frmEstructuras_Ramificadas___Arbol_Binario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 500);
+            this.ClientSize = new System.Drawing.Size(637, 500);
             this.Controls.Add(this.tvArbol);
             this.Controls.Add(this.btnEquilibrar);
             this.Controls.Add(this.mrcListar);
             this.Controls.Add(this.mrcEliminado);
             this.Controls.Add(this.mrcElemento);
             this.Name = "frmEstructuras_Ramificadas___Arbol_Binario";
-            this.Text = "Estructuras_Ramificadas___Arbol_Binario";
+            this.Text = "Estructuras Ramificadas Arbol Binario";
             this.mrcListar.ResumeLayout(false);
             this.mrcListar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();

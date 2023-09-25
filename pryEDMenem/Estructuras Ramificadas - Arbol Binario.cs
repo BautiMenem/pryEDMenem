@@ -26,6 +26,8 @@ namespace pryEDMenem
 
             Codigos.Agregar(ObjNodo);
             Codigos.Recorrer(dgvArbol);
+            Codigos.Recorrer(tvArbol);
+            
            
             txtCodigo.Text = "";
             txtNombre.Text = "";
@@ -55,6 +57,17 @@ namespace pryEDMenem
             {
                 Codigos.RecorrerPost(dgvArbol);
             }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            int Codigo = Convert.ToInt32(cboCodigo.Text);
+            Codigos.Eliminar(Codigo);
+        }
+
+        private void btnEquilibrar_Click(object sender, EventArgs e)
+        {
+            Codigos.Equilibrar();
         }
     }
 }
