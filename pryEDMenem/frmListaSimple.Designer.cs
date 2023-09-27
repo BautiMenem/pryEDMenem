@@ -117,7 +117,7 @@
             // 
             this.cboCodigo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCodigo.FormattingEnabled = true;
-            this.cboCodigo.Location = new System.Drawing.Point(78, 118);
+            this.cboCodigo.Location = new System.Drawing.Point(78, 46);
             this.cboCodigo.Name = "cboCodigo";
             this.cboCodigo.Size = new System.Drawing.Size(101, 21);
             this.cboCodigo.TabIndex = 8;
@@ -137,7 +137,7 @@
             // lblCod
             // 
             this.lblCod.AutoSize = true;
-            this.lblCod.Location = new System.Drawing.Point(17, 118);
+            this.lblCod.Location = new System.Drawing.Point(17, 50);
             this.lblCod.Name = "lblCod";
             this.lblCod.Size = new System.Drawing.Size(40, 13);
             this.lblCod.TabIndex = 7;
@@ -183,6 +183,7 @@
             this.txtCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtCodigo.TabIndex = 4;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // btnAgregar
             // 

@@ -98,6 +98,7 @@
             this.txtCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtCodigo.TabIndex = 4;
             this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // btnAgregar
             // 
@@ -171,6 +172,7 @@
             this.lblTrami.Size = new System.Drawing.Size(110, 20);
             this.lblTrami.TabIndex = 8;
             this.lblTrami.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblTrami.Click += new System.EventHandler(this.lblTrami_Click);
             // 
             // lblCodi
             // 
@@ -181,6 +183,7 @@
             this.lblCodi.Size = new System.Drawing.Size(83, 20);
             this.lblCodi.TabIndex = 6;
             this.lblCodi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCodi.Click += new System.EventHandler(this.lblCodi_Click);
             // 
             // btnEliminar
             // 

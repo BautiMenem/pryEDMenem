@@ -80,6 +80,7 @@
             this.btnExportar.TabIndex = 7;
             this.btnExportar.Text = "Exportar";
             this.btnExportar.UseVisualStyleBackColor = true;
+            this.btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // rbPost
             // 
@@ -164,6 +165,7 @@
             this.cboCodigo.Name = "cboCodigo";
             this.cboCodigo.Size = new System.Drawing.Size(101, 21);
             this.cboCodigo.TabIndex = 8;
+            this.cboCodigo.SelectedIndexChanged += new System.EventHandler(this.cboCodigo_SelectedIndexChanged);
             // 
             // btnEliminar
             // 
@@ -203,24 +205,26 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(86, 94);
+            this.txtNombre.Location = new System.Drawing.Point(86, 77);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(108, 20);
             this.txtNombre.TabIndex = 6;
             // 
             // txtTramite
             // 
-            this.txtTramite.Location = new System.Drawing.Point(86, 137);
+            this.txtTramite.Location = new System.Drawing.Point(86, 122);
             this.txtTramite.Name = "txtTramite";
             this.txtTramite.Size = new System.Drawing.Size(108, 20);
             this.txtTramite.TabIndex = 5;
+            this.txtTramite.TextChanged += new System.EventHandler(this.txtTramite_TextChanged);
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(118, 52);
+            this.txtCodigo.Location = new System.Drawing.Point(118, 38);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(76, 20);
             this.txtCodigo.TabIndex = 4;
+            this.txtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigo_KeyPress);
             // 
             // btnAgregar
             // 
@@ -236,7 +240,7 @@
             // lblTramite
             // 
             this.lblTramite.AutoSize = true;
-            this.lblTramite.Location = new System.Drawing.Point(17, 140);
+            this.lblTramite.Location = new System.Drawing.Point(17, 129);
             this.lblTramite.Name = "lblTramite";
             this.lblTramite.Size = new System.Drawing.Size(42, 13);
             this.lblTramite.TabIndex = 2;
@@ -245,7 +249,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(15, 97);
+            this.lblNombre.Location = new System.Drawing.Point(15, 80);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 1;
@@ -254,7 +258,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(17, 55);
+            this.lblCodigo.Location = new System.Drawing.Point(15, 38);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 0;
@@ -282,6 +286,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(637, 500);
             this.Controls.Add(this.tvArbol);
             this.Controls.Add(this.btnEquilibrar);
@@ -289,7 +294,9 @@
             this.Controls.Add(this.mrcEliminado);
             this.Controls.Add(this.mrcElemento);
             this.Name = "frmEstructuras_Ramificadas___Arbol_Binario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estructuras Ramificadas Arbol Binario";
+            this.Load += new System.EventHandler(this.frmEstructuras_Ramificadas___Arbol_Binario_Load);
             this.mrcListar.ResumeLayout(false);
             this.mrcListar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArbol)).EndInit();

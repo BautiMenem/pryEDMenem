@@ -56,5 +56,11 @@ namespace pryEDMenem
             frmListaDoble ld = new frmListaDoble();
             ld.ShowDialog();
         }
+
+        private void arbolBinarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEstructuras_Ramificadas___Arbol_Binario Ar = new frmEstructuras_Ramificadas___Arbol_Binario();
+            Ar.ShowDialog();
+        }
     }
 }

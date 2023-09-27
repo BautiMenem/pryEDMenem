@@ -12,6 +12,8 @@ namespace pryEDMenem
      class clsArbolBinario
     {
         private clsNodo Inicio;
+    
+
         public clsNodo Raiz
         {
             get { return Inicio; }
@@ -190,5 +192,102 @@ namespace pryEDMenem
                 PreOrden(R.Derecha, NodoPadre);
             }
         }
-     }
+
+        public void ExportarIn(DataGridView Grilla)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("arbolInOrden.txt", false))
+                {
+                    foreach (DataGridViewRow row in Grilla.Rows)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            // Escribe el valor de la celda en el archivo de texto
+                            writer.Write(cell.Value + "\t");
+                        }
+                        writer.WriteLine(); // Salta a la siguiente línea
+                    }
+                }
+                MessageBox.Show("Datos guardados en el archivo de texto correctamente.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar los datos: " + ex.Message);
+            }
+
+        }
+
+        public void ExportarPre(DataGridView Grilla)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("arbolPreOrden.txt", false))
+                {
+                    foreach (DataGridViewRow row in Grilla.Rows)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            // Escribe el valor de la celda en el archivo de texto
+                            writer.Write(cell.Value + "\t");
+                        }
+                        writer.WriteLine(); // Salta a la siguiente línea
+                    }
+                }
+                MessageBox.Show("Datos guardados en el archivo de texto correctamente.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar los datos: " + ex.Message);
+            }
+
+        }
+
+        public void ExportarPost(DataGridView Grilla)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("arbolPostOrden.txt", false))
+                {
+                    foreach (DataGridViewRow row in Grilla.Rows)
+                    {
+                        foreach (DataGridViewCell cell in row.Cells)
+                        {
+                            // Escribe el valor de la celda en el archivo de texto
+                            writer.Write(cell.Value + "\t");
+                        }
+                        writer.WriteLine(); // Salta a la siguiente línea
+                    }
+                }
+                MessageBox.Show("Datos guardados en el archivo de texto correctamente.");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar los datos: " + ex.Message);
+            }
+
+        }
+
+        public void Recorrer(ComboBox Lista)
+        {
+            Lista.Items.Clear();
+            InOrdenAsc(Lista, Raiz);
+        }
+
+        private void InOrdenAsc(ComboBox Lst, clsNodo R)
+        {
+            if (R.Izquierda != null)
+            {
+                InOrdenAsc(Lst, R.Izquierda);
+            }
+            Lst.Items.Add(R.Codigo);
+            if (R.Derecha != null)
+            {
+                InOrdenAsc(Lst, R.Derecha);
+            }
+        }
+    }
 }

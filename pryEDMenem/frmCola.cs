@@ -88,5 +88,23 @@ namespace pryEDMenem
         {
             validardatos();
         }
+
+        private void lblCodi_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTrami_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // No permite caracteres que no sean números
+            }
+        }
     }
 }

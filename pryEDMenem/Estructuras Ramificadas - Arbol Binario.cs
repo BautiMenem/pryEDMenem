@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace pryEDMenem
 {
@@ -27,6 +28,7 @@ namespace pryEDMenem
             Codigos.Agregar(ObjNodo);
             Codigos.Recorrer(dgvArbol);
             Codigos.Recorrer(tvArbol);
+            Codigos.Recorrer(cboCodigo);
             
            
             txtCodigo.Text = "";
@@ -43,6 +45,17 @@ namespace pryEDMenem
            
         }
 
+        public void validardatos()
+        {
+            if (txtCodigo.Text != "" && txtNombre.Text != "" && txtTramite.Text != "")
+            {
+                btnAgregar.Enabled = true;
+            }
+            else
+            {
+                btnAgregar.Enabled = false;
+            }
+        }
         private void rbPre_CheckedChanged(object sender, EventArgs e)
         {
             if (rbPre.Checked)
@@ -63,11 +76,73 @@ namespace pryEDMenem
         {
             int Codigo = Convert.ToInt32(cboCodigo.Text);
             Codigos.Eliminar(Codigo);
+            Codigos.Recorrer(dgvArbol);
+            Codigos.Recorrer(tvArbol);
+            Codigos.Recorrer(cboCodigo);
         }
 
         private void btnEquilibrar_Click(object sender, EventArgs e)
         {
             Codigos.Equilibrar();
+            Codigos.Recorrer(dgvArbol);
+            Codigos.Recorrer(tvArbol);
+            Codigos.Recorrer(cboCodigo);
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            if (rbIn.Checked)
+            {
+                Codigos.ExportarIn(dgvArbol);
+            }
+            else
+            {
+                if (rbPre.Checked)
+                {
+                    Codigos.ExportarPre(dgvArbol);
+                }
+                else
+                {
+                    if (rbPost.Checked)
+                    {
+                        Codigos.ExportarPost(dgvArbol);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Seleccione una opcion de ordenamiento", "", MessageBoxButtons.OK);
+                    }
+                }
+            }
+        }
+
+        private void frmEstructuras_Ramificadas___Arbol_Binario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboCodigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cboCodigo.SelectedIndex != -1 )
+            {
+                btnEliminar.Enabled = true;
+            }
+            else
+            {
+                btnEliminar.Enabled = false;
+            }
+        }
+
+        private void txtTramite_TextChanged(object sender, EventArgs e)
+        {
+            validardatos();
+        }
+
+        private void txtCodigo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true; // No permite caracteres que no sean números
+            }
         }
     }
 }
