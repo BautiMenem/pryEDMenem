@@ -266,7 +266,7 @@ namespace pryEDMenem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error al guardar los datos: " + ex.Message);
+                MessageBox.Show("Error al guardar los datos: " + ex.Message);                  
             }
 
         }
