@@ -30,16 +30,16 @@
         {
             this.dgvBD = new System.Windows.Forms.DataGridView();
             this.mrcSelect = new System.Windows.Forms.GroupBox();
-            this.mecWhere = new System.Windows.Forms.GroupBox();
-            this.mecAlg = new System.Windows.Forms.GroupBox();
-            this.btnSimple = new System.Windows.Forms.Button();
-            this.btnMulti = new System.Windows.Forms.Button();
             this.btnJuntar = new System.Windows.Forms.Button();
-            this.btnDiferencia = new System.Windows.Forms.Button();
+            this.btnMulti = new System.Windows.Forms.Button();
+            this.btnSimple = new System.Windows.Forms.Button();
+            this.mecWhere = new System.Windows.Forms.GroupBox();
+            this.btnConv = new System.Windows.Forms.Button();
             this.btnSMulti = new System.Windows.Forms.Button();
             this.btnSSimple = new System.Windows.Forms.Button();
-            this.btnConv = new System.Windows.Forms.Button();
+            this.mecAlg = new System.Windows.Forms.GroupBox();
             this.brnInter = new System.Windows.Forms.Button();
+            this.btnDiferencia = new System.Windows.Forms.Button();
             this.btnUnion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBD)).BeginInit();
             this.mrcSelect.SuspendLayout();
@@ -67,6 +67,34 @@
             this.mrcSelect.TabStop = false;
             this.mrcSelect.Text = "Operaciones de Proyectos - SELECT";
             // 
+            // btnJuntar
+            // 
+            this.btnJuntar.Location = new System.Drawing.Point(16, 134);
+            this.btnJuntar.Name = "btnJuntar";
+            this.btnJuntar.Size = new System.Drawing.Size(232, 34);
+            this.btnJuntar.TabIndex = 2;
+            this.btnJuntar.Text = "Juntar";
+            this.btnJuntar.UseVisualStyleBackColor = true;
+            // 
+            // btnMulti
+            // 
+            this.btnMulti.Location = new System.Drawing.Point(16, 82);
+            this.btnMulti.Name = "btnMulti";
+            this.btnMulti.Size = new System.Drawing.Size(232, 34);
+            this.btnMulti.TabIndex = 1;
+            this.btnMulti.Text = "Proyeccion multiatributo";
+            this.btnMulti.UseVisualStyleBackColor = true;
+            // 
+            // btnSimple
+            // 
+            this.btnSimple.Location = new System.Drawing.Point(16, 32);
+            this.btnSimple.Name = "btnSimple";
+            this.btnSimple.Size = new System.Drawing.Size(232, 34);
+            this.btnSimple.TabIndex = 0;
+            this.btnSimple.Text = "Proyeccion Simple";
+            this.btnSimple.UseVisualStyleBackColor = true;
+            this.btnSimple.Click += new System.EventHandler(this.btnSimple_Click);
+            // 
             // mecWhere
             // 
             this.mecWhere.Controls.Add(this.btnConv);
@@ -79,53 +107,14 @@
             this.mecWhere.TabStop = false;
             this.mecWhere.Text = "Operaciones de Selección - WHERE";
             // 
-            // mecAlg
+            // btnConv
             // 
-            this.mecAlg.Controls.Add(this.brnInter);
-            this.mecAlg.Controls.Add(this.btnDiferencia);
-            this.mecAlg.Controls.Add(this.btnUnion);
-            this.mecAlg.Location = new System.Drawing.Point(534, 317);
-            this.mecAlg.Name = "mecAlg";
-            this.mecAlg.Size = new System.Drawing.Size(254, 178);
-            this.mecAlg.TabIndex = 3;
-            this.mecAlg.TabStop = false;
-            this.mecAlg.Text = "Operaciones Algebraicas";
-            // 
-            // btnSimple
-            // 
-            this.btnSimple.Location = new System.Drawing.Point(16, 32);
-            this.btnSimple.Name = "btnSimple";
-            this.btnSimple.Size = new System.Drawing.Size(232, 34);
-            this.btnSimple.TabIndex = 0;
-            this.btnSimple.Text = "Proyeccion Simple";
-            this.btnSimple.UseVisualStyleBackColor = true;
-            // 
-            // btnMulti
-            // 
-            this.btnMulti.Location = new System.Drawing.Point(16, 82);
-            this.btnMulti.Name = "btnMulti";
-            this.btnMulti.Size = new System.Drawing.Size(232, 34);
-            this.btnMulti.TabIndex = 1;
-            this.btnMulti.Text = "Proyeccion multiatributo";
-            this.btnMulti.UseVisualStyleBackColor = true;
-            // 
-            // btnJuntar
-            // 
-            this.btnJuntar.Location = new System.Drawing.Point(16, 134);
-            this.btnJuntar.Name = "btnJuntar";
-            this.btnJuntar.Size = new System.Drawing.Size(232, 34);
-            this.btnJuntar.TabIndex = 2;
-            this.btnJuntar.Text = "Juntar";
-            this.btnJuntar.UseVisualStyleBackColor = true;
-            // 
-            // btnDiferencia
-            // 
-            this.btnDiferencia.Location = new System.Drawing.Point(6, 134);
-            this.btnDiferencia.Name = "btnDiferencia";
-            this.btnDiferencia.Size = new System.Drawing.Size(232, 34);
-            this.btnDiferencia.TabIndex = 3;
-            this.btnDiferencia.Text = "Diferencia";
-            this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnConv.Location = new System.Drawing.Point(6, 134);
+            this.btnConv.Name = "btnConv";
+            this.btnConv.Size = new System.Drawing.Size(232, 34);
+            this.btnConv.TabIndex = 6;
+            this.btnConv.Text = "Seleccion por convolucion";
+            this.btnConv.UseVisualStyleBackColor = true;
             // 
             // btnSMulti
             // 
@@ -145,14 +134,17 @@
             this.btnSSimple.Text = "Seleccion Simple";
             this.btnSSimple.UseVisualStyleBackColor = true;
             // 
-            // btnConv
+            // mecAlg
             // 
-            this.btnConv.Location = new System.Drawing.Point(6, 134);
-            this.btnConv.Name = "btnConv";
-            this.btnConv.Size = new System.Drawing.Size(232, 34);
-            this.btnConv.TabIndex = 6;
-            this.btnConv.Text = "Seleccion por convolucion";
-            this.btnConv.UseVisualStyleBackColor = true;
+            this.mecAlg.Controls.Add(this.brnInter);
+            this.mecAlg.Controls.Add(this.btnDiferencia);
+            this.mecAlg.Controls.Add(this.btnUnion);
+            this.mecAlg.Location = new System.Drawing.Point(534, 317);
+            this.mecAlg.Name = "mecAlg";
+            this.mecAlg.Size = new System.Drawing.Size(254, 178);
+            this.mecAlg.TabIndex = 3;
+            this.mecAlg.TabStop = false;
+            this.mecAlg.Text = "Operaciones Algebraicas";
             // 
             // brnInter
             // 
@@ -162,6 +154,16 @@
             this.brnInter.TabIndex = 7;
             this.brnInter.Text = "Intersección";
             this.brnInter.UseVisualStyleBackColor = true;
+            this.brnInter.Click += new System.EventHandler(this.brnInter_Click);
+            // 
+            // btnDiferencia
+            // 
+            this.btnDiferencia.Location = new System.Drawing.Point(6, 134);
+            this.btnDiferencia.Name = "btnDiferencia";
+            this.btnDiferencia.Size = new System.Drawing.Size(232, 34);
+            this.btnDiferencia.TabIndex = 3;
+            this.btnDiferencia.Text = "Diferencia";
+            this.btnDiferencia.UseVisualStyleBackColor = true;
             // 
             // btnUnion
             // 

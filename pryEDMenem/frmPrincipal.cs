@@ -62,5 +62,24 @@ namespace pryEDMenem
             frmEstructuras_Ramificadas___Arbol_Binario Ar = new frmEstructuras_Ramificadas___Arbol_Binario();
             Ar.ShowDialog();
         }
+
+        private void repasoDeOperacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRepaso R = new frmRepaso();
+            R.ShowDialog();
+        }
+
+        private void operacionesConTablasDeBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBasedeDatos B = new frmBasedeDatos();
+            B.ShowDialog();
+
+        }
+
+        private void consultaEnLaBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultas C = new frmConsultas();
+            C.ShowDialog();
+        }
     }
 }
