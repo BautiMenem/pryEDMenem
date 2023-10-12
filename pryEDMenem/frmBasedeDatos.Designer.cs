@@ -75,6 +75,7 @@
             this.btnJuntar.TabIndex = 2;
             this.btnJuntar.Text = "Juntar";
             this.btnJuntar.UseVisualStyleBackColor = true;
+            this.btnJuntar.Click += new System.EventHandler(this.btnJuntar_Click);
             // 
             // btnMulti
             // 
@@ -84,6 +85,7 @@
             this.btnMulti.TabIndex = 1;
             this.btnMulti.Text = "Proyeccion multiatributo";
             this.btnMulti.UseVisualStyleBackColor = true;
+            this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
             // 
             // btnSimple
             // 
@@ -115,6 +117,7 @@
             this.btnConv.TabIndex = 6;
             this.btnConv.Text = "Seleccion por convolucion";
             this.btnConv.UseVisualStyleBackColor = true;
+            this.btnConv.Click += new System.EventHandler(this.btnConv_Click);
             // 
             // btnSMulti
             // 
@@ -124,6 +127,7 @@
             this.btnSMulti.TabIndex = 4;
             this.btnSMulti.Text = "Seleccion multiatributo";
             this.btnSMulti.UseVisualStyleBackColor = true;
+            this.btnSMulti.Click += new System.EventHandler(this.btnSMulti_Click);
             // 
             // btnSSimple
             // 
@@ -133,6 +137,7 @@
             this.btnSSimple.TabIndex = 5;
             this.btnSSimple.Text = "Seleccion Simple";
             this.btnSSimple.UseVisualStyleBackColor = true;
+            this.btnSSimple.Click += new System.EventHandler(this.btnSSimple_Click);
             // 
             // mecAlg
             // 
@@ -164,6 +169,7 @@
             this.btnDiferencia.TabIndex = 3;
             this.btnDiferencia.Text = "Diferencia";
             this.btnDiferencia.UseVisualStyleBackColor = true;
+            this.btnDiferencia.Click += new System.EventHandler(this.btnDiferencia_Click);
             // 
             // btnUnion
             // 
@@ -173,6 +179,7 @@
             this.btnUnion.TabIndex = 8;
             this.btnUnion.Text = "Union";
             this.btnUnion.UseVisualStyleBackColor = true;
+            this.btnUnion.Click += new System.EventHandler(this.btnUnion_Click);
             // 
             // frmBasedeDatos
             // 

@@ -70,7 +70,7 @@ namespace pryEDMenem
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                throw;
+                conexion.Close();
             }
         }
     }
