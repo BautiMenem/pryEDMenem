@@ -94,6 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(779, 450);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.txtRepaso);
@@ -101,7 +102,7 @@
             this.Controls.Add(this.cboOperacion);
             this.Controls.Add(this.lblOperacion);
             this.Name = "frmRepaso";
-            this.Text = "frmRepaso";
+            this.Text = "Repaso Consulta SQL";
             this.Load += new System.EventHandler(this.frmRepaso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);

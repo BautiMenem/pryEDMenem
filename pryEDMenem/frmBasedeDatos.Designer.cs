@@ -185,13 +185,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 501);
             this.Controls.Add(this.mecAlg);
             this.Controls.Add(this.mecWhere);
             this.Controls.Add(this.mrcSelect);
             this.Controls.Add(this.dgvBD);
             this.Name = "frmBasedeDatos";
-            this.Text = "Base de Datos";
+            this.Text = "Operaciones SQL";
+            this.Load += new System.EventHandler(this.frmBasedeDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBD)).EndInit();
             this.mrcSelect.ResumeLayout(false);
             this.mecWhere.ResumeLayout(false);

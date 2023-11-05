@@ -22,5 +22,10 @@ namespace pryEDMenem
             clsConexionaBD objBase = new clsConexionaBD();
             objBase.Listar(dgvDatos, lstConsulta.Text);
         }
+
+        private void frmConsultas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

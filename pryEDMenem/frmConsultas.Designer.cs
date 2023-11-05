@@ -76,13 +76,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 496);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(800, 505);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lblConsulta);
             this.Controls.Add(this.lstConsulta);
             this.Controls.Add(this.dgvDatos);
             this.Name = "frmConsultas";
             this.Text = "Consultasen la Base de Datos";
+            this.Load += new System.EventHandler(this.frmConsultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

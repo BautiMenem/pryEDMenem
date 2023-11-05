@@ -82,5 +82,10 @@ namespace pryEDMenem
             string Sql = "SELECT * FROM Libro";
             objCon.Listar(dgvBD, Sql);
         }
+
+        private void frmBasedeDatos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
