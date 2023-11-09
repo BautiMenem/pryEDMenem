@@ -33,18 +33,18 @@
             this.btnJuntar = new System.Windows.Forms.Button();
             this.btnMulti = new System.Windows.Forms.Button();
             this.btnSimple = new System.Windows.Forms.Button();
-            this.mecWhere = new System.Windows.Forms.GroupBox();
+            this.mrcWhere = new System.Windows.Forms.GroupBox();
             this.btnConv = new System.Windows.Forms.Button();
             this.btnSMulti = new System.Windows.Forms.Button();
             this.btnSSimple = new System.Windows.Forms.Button();
-            this.mecAlg = new System.Windows.Forms.GroupBox();
+            this.mrcAlg = new System.Windows.Forms.GroupBox();
             this.brnInter = new System.Windows.Forms.Button();
             this.btnDiferencia = new System.Windows.Forms.Button();
             this.btnUnion = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBD)).BeginInit();
             this.mrcSelect.SuspendLayout();
-            this.mecWhere.SuspendLayout();
-            this.mecAlg.SuspendLayout();
+            this.mrcWhere.SuspendLayout();
+            this.mrcAlg.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvBD
@@ -97,17 +97,17 @@
             this.btnSimple.UseVisualStyleBackColor = true;
             this.btnSimple.Click += new System.EventHandler(this.btnSimple_Click);
             // 
-            // mecWhere
+            // mrcWhere
             // 
-            this.mecWhere.Controls.Add(this.btnConv);
-            this.mecWhere.Controls.Add(this.btnSMulti);
-            this.mecWhere.Controls.Add(this.btnSSimple);
-            this.mecWhere.Location = new System.Drawing.Point(273, 317);
-            this.mecWhere.Name = "mecWhere";
-            this.mecWhere.Size = new System.Drawing.Size(254, 178);
-            this.mecWhere.TabIndex = 2;
-            this.mecWhere.TabStop = false;
-            this.mecWhere.Text = "Operaciones de Selección - WHERE";
+            this.mrcWhere.Controls.Add(this.btnConv);
+            this.mrcWhere.Controls.Add(this.btnSMulti);
+            this.mrcWhere.Controls.Add(this.btnSSimple);
+            this.mrcWhere.Location = new System.Drawing.Point(273, 317);
+            this.mrcWhere.Name = "mrcWhere";
+            this.mrcWhere.Size = new System.Drawing.Size(254, 178);
+            this.mrcWhere.TabIndex = 2;
+            this.mrcWhere.TabStop = false;
+            this.mrcWhere.Text = "Operaciones de Selección - WHERE";
             // 
             // btnConv
             // 
@@ -139,17 +139,17 @@
             this.btnSSimple.UseVisualStyleBackColor = true;
             this.btnSSimple.Click += new System.EventHandler(this.btnSSimple_Click);
             // 
-            // mecAlg
+            // mrcAlg
             // 
-            this.mecAlg.Controls.Add(this.brnInter);
-            this.mecAlg.Controls.Add(this.btnDiferencia);
-            this.mecAlg.Controls.Add(this.btnUnion);
-            this.mecAlg.Location = new System.Drawing.Point(534, 317);
-            this.mecAlg.Name = "mecAlg";
-            this.mecAlg.Size = new System.Drawing.Size(254, 178);
-            this.mecAlg.TabIndex = 3;
-            this.mecAlg.TabStop = false;
-            this.mecAlg.Text = "Operaciones Algebraicas";
+            this.mrcAlg.Controls.Add(this.brnInter);
+            this.mrcAlg.Controls.Add(this.btnDiferencia);
+            this.mrcAlg.Controls.Add(this.btnUnion);
+            this.mrcAlg.Location = new System.Drawing.Point(534, 317);
+            this.mrcAlg.Name = "mrcAlg";
+            this.mrcAlg.Size = new System.Drawing.Size(254, 178);
+            this.mrcAlg.TabIndex = 3;
+            this.mrcAlg.TabStop = false;
+            this.mrcAlg.Text = "Operaciones Algebraicas";
             // 
             // brnInter
             // 
@@ -187,17 +187,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 501);
-            this.Controls.Add(this.mecAlg);
-            this.Controls.Add(this.mecWhere);
+            this.Controls.Add(this.mrcAlg);
+            this.Controls.Add(this.mrcWhere);
             this.Controls.Add(this.mrcSelect);
             this.Controls.Add(this.dgvBD);
             this.Name = "frmBasedeDatos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Operaciones SQL";
             this.Load += new System.EventHandler(this.frmBasedeDatos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBD)).EndInit();
             this.mrcSelect.ResumeLayout(false);
-            this.mecWhere.ResumeLayout(false);
-            this.mecAlg.ResumeLayout(false);
+            this.mrcWhere.ResumeLayout(false);
+            this.mrcAlg.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -206,8 +207,8 @@
 
         private System.Windows.Forms.DataGridView dgvBD;
         private System.Windows.Forms.GroupBox mrcSelect;
-        private System.Windows.Forms.GroupBox mecWhere;
-        private System.Windows.Forms.GroupBox mecAlg;
+        private System.Windows.Forms.GroupBox mrcWhere;
+        private System.Windows.Forms.GroupBox mrcAlg;
         private System.Windows.Forms.Button btnJuntar;
         private System.Windows.Forms.Button btnMulti;
         private System.Windows.Forms.Button btnSimple;

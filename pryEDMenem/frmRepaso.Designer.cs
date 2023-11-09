@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.lblOperacion = new System.Windows.Forms.Label();
-            this.cboOperacion = new System.Windows.Forms.ComboBox();
+            this.cmbListar = new System.Windows.Forms.ComboBox();
             this.btnListar = new System.Windows.Forms.Button();
-            this.txtRepaso = new System.Windows.Forms.TextBox();
-            this.dgvDatos = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
+            this.txtListar = new System.Windows.Forms.TextBox();
+            this.dgvListar = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblOperacion
@@ -45,10 +45,10 @@
             this.lblOperacion.TabIndex = 0;
             this.lblOperacion.Text = "Operacion a realizar en la base de Datos:";
             // 
-            // cboOperacion
+            // cmbListar
             // 
-            this.cboOperacion.FormattingEnabled = true;
-            this.cboOperacion.Items.AddRange(new object[] {
+            this.cmbListar.FormattingEnabled = true;
+            this.cmbListar.Items.AddRange(new object[] {
             "Diferencia",
             "Intersección",
             "Juntar",
@@ -59,10 +59,10 @@
             "Selección Multiatributo por Convolucion ",
             "Selección Simple ",
             "Unión"});
-            this.cboOperacion.Location = new System.Drawing.Point(220, 19);
-            this.cboOperacion.Name = "cboOperacion";
-            this.cboOperacion.Size = new System.Drawing.Size(447, 21);
-            this.cboOperacion.TabIndex = 1;
+            this.cmbListar.Location = new System.Drawing.Point(220, 19);
+            this.cmbListar.Name = "cmbListar";
+            this.cmbListar.Size = new System.Drawing.Size(447, 21);
+            this.cmbListar.TabIndex = 1;
             // 
             // btnListar
             // 
@@ -74,21 +74,21 @@
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
-            // txtRepaso
+            // txtListar
             // 
-            this.txtRepaso.Location = new System.Drawing.Point(12, 46);
-            this.txtRepaso.Multiline = true;
-            this.txtRepaso.Name = "txtRepaso";
-            this.txtRepaso.Size = new System.Drawing.Size(750, 98);
-            this.txtRepaso.TabIndex = 3;
+            this.txtListar.Location = new System.Drawing.Point(12, 46);
+            this.txtListar.Multiline = true;
+            this.txtListar.Name = "txtListar";
+            this.txtListar.Size = new System.Drawing.Size(750, 98);
+            this.txtListar.TabIndex = 3;
             // 
-            // dgvDatos
+            // dgvListar
             // 
-            this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDatos.Location = new System.Drawing.Point(12, 151);
-            this.dgvDatos.Name = "dgvDatos";
-            this.dgvDatos.Size = new System.Drawing.Size(750, 287);
-            this.dgvDatos.TabIndex = 4;
+            this.dgvListar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListar.Location = new System.Drawing.Point(12, 151);
+            this.dgvListar.Name = "dgvListar";
+            this.dgvListar.Size = new System.Drawing.Size(750, 287);
+            this.dgvListar.TabIndex = 4;
             // 
             // frmRepaso
             // 
@@ -96,15 +96,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(779, 450);
-            this.Controls.Add(this.dgvDatos);
-            this.Controls.Add(this.txtRepaso);
+            this.Controls.Add(this.dgvListar);
+            this.Controls.Add(this.txtListar);
             this.Controls.Add(this.btnListar);
-            this.Controls.Add(this.cboOperacion);
+            this.Controls.Add(this.cmbListar);
             this.Controls.Add(this.lblOperacion);
             this.Name = "frmRepaso";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repaso Consulta SQL";
             this.Load += new System.EventHandler(this.frmRepaso_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,9 +114,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblOperacion;
-        private System.Windows.Forms.ComboBox cboOperacion;
+        private System.Windows.Forms.ComboBox cmbListar;
         private System.Windows.Forms.Button btnListar;
-        private System.Windows.Forms.TextBox txtRepaso;
-        private System.Windows.Forms.DataGridView dgvDatos;
+        private System.Windows.Forms.TextBox txtListar;
+        private System.Windows.Forms.DataGridView dgvListar;
     }
 }

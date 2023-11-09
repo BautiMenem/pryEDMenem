@@ -19,8 +19,12 @@ namespace pryEDMenem
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+            if (txtConsulta.Text != "")
+            {
+                btnListar.Enabled = true;
+            }
             clsConexionaBD objBase = new clsConexionaBD();
-            objBase.Listar(dgvDatos, lstConsulta.Text);
+            objBase.Listar(dgvDatos, txtConsulta.Text);
         }
 
         private void frmConsultas_Load(object sender, EventArgs e)

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvDatos = new System.Windows.Forms.DataGridView();
-            this.lstConsulta = new System.Windows.Forms.ListBox();
             this.lblConsulta = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Button();
+            this.txtConsulta = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,15 +42,6 @@
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.Size = new System.Drawing.Size(775, 221);
             this.dgvDatos.TabIndex = 0;
-            // 
-            // lstConsulta
-            // 
-            this.lstConsulta.FormattingEnabled = true;
-            this.lstConsulta.Location = new System.Drawing.Point(13, 38);
-            this.lstConsulta.Name = "lstConsulta";
-            this.lstConsulta.Size = new System.Drawing.Size(775, 199);
-            this.lstConsulta.TabIndex = 1;
-            this.lstConsulta.Tag = "";
             // 
             // lblConsulta
             // 
@@ -64,6 +55,7 @@
             // 
             // btnListar
             // 
+            this.btnListar.Enabled = false;
             this.btnListar.Location = new System.Drawing.Point(13, 244);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(75, 23);
@@ -72,17 +64,26 @@
             this.btnListar.UseVisualStyleBackColor = true;
             this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
+            // txtConsulta
+            // 
+            this.txtConsulta.Location = new System.Drawing.Point(17, 36);
+            this.txtConsulta.Multiline = true;
+            this.txtConsulta.Name = "txtConsulta";
+            this.txtConsulta.Size = new System.Drawing.Size(771, 202);
+            this.txtConsulta.TabIndex = 4;
+            // 
             // frmConsultas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(800, 505);
+            this.Controls.Add(this.txtConsulta);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.lblConsulta);
-            this.Controls.Add(this.lstConsulta);
             this.Controls.Add(this.dgvDatos);
             this.Name = "frmConsultas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultasen la Base de Datos";
             this.Load += new System.EventHandler(this.frmConsultas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
@@ -94,8 +95,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDatos;
-        private System.Windows.Forms.ListBox lstConsulta;
         private System.Windows.Forms.Label lblConsulta;
         private System.Windows.Forms.Button btnListar;
+        private System.Windows.Forms.TextBox txtConsulta;
     }
 }
